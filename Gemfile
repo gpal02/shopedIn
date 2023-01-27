@@ -73,3 +73,6 @@ end
 
 # Used for authentication
 gem 'devise'
+
+# bootstrap
+gem 'cssbundling-rails'
