@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>ShopedIn</title>
+    <%= favicon_link_tag 'ShopedIn.png', rel: 'icon', type: 'image/png' %>
+    
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,7 +13,12 @@
   </head>
 
   <body>
-    <%= render 'shared/header'%>
-    <%= yield %>
+    <%= link_to 'home', root_path %>
+    <%= render 'shared/header' %>
+    <div class="container">
+      <div class="row">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>

@@ -1,2 +1,43 @@
-<h1>Products#_form</h1>
-<p>Find me in app/views/products/_form.html.erb</p>
+<%= form_with model: product do |form| %>
+
+  <div>
+    <%= form.file_field :avatar, multiple: true %>
+  </div>
+  <div>
+    <%= form.label :product_name %><br>
+    <%= form.text_field :product_name %>
+  </div>
+
+  <div>
+    <%= form.label :product_description %><br>
+    <%= form.text_area :product_description %>
+  </div>
+
+  <div>
+    <%= form.label :product_dimention %><br>
+    <%= form.text_field :product_dimention %>
+  </div>
+
+  <div>
+    <%= form.label :product_price %><br>
+    <%= form.text_field :product_price %>
+  </div>
+
+  <div>
+    <%= form.label :company_id %><br>
+    <%= form.collection_select :company_id, Company.all, :id, :company_name %>
+
+  </div>
+
+  <div>
+    <%= form.label :category_id %><br>
+    <%= form.collection_select :category_id, Category.all, :id, :category_name%>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+
+<%= link_to "Back",:back%>

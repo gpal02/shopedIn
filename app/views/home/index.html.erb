@@ -1,2 +1,39 @@
 <center>YOUR SHOP</center>
 <h3><center>we are here to develop e-commerce website</center></h3>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <%= link_to "add your product", new_product_path%>
+      <h1>Products</h1>
+
+      <ul>
+        <% @products.each do |product|%>
+          <li>
+            <%= link_to product.product_name, product%>
+          </li>
+          <li>
+            <%= product.product_price%>
+          </li>
+          <p></p>
+        <% end %>
+      </ul>
+    </div>
+  
+    <div class="col">
+      <%= link_to "add your company", new_company_path%>
+      <h1>Compaies</h1>
+
+      <ul>
+        <% @companies.each do |company|%>
+          <li>
+            <%= company.company_name%>
+          </li>
+          
+          Description: <%= company.company_description%>
+          
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

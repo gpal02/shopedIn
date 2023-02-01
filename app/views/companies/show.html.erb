@@ -1,2 +1,22 @@
-<h1>Companies#show</h1>
-<p>Find me in app/views/companies/show.html.erb</p>
+<h1><%= @company.company_name %></h1>
+
+<p><%= @company.gstin_no %></p>
+
+<p><%= @company.company_address %></p>
+
+<p><%= @company.company_contact %></p>
+
+<p><%= @company.company_description %></p>
+
+
+
+
+<ul>
+  <li><%= link_to "Edit", edit_company_path(@company) %></li>
+  <li><%= link_to "Delete", company_path(@company), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+
+  <li><%= link_to "Back",:back%></li>
+</ul>
