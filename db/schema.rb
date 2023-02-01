@@ -14,16 +14,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_27_060321) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "companies", force: :cascade do |t|
-    t.string "company_name"
-    t.string "gstin_no"
-    t.string "company_address"
-    t.string "company_contact"
-    t.text "company_description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "contact"
     t.string "first_name"
