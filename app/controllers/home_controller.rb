@@ -4,5 +4,4 @@ class HomeController < ApplicationController
     @companies = Company.all
     @carts = Cart.all
   end
-  end
 end
