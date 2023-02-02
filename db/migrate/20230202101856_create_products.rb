@@ -8,8 +8,6 @@ class CreateProducts < ActiveRecord::Migration[7.0]
       t.string :product_serial_number
       t.references :company, null: false, foreign_key: true
       t.references :category, null: false, foreign_key: true
-      t.references :order, null: false, foreign_key: true
-      t.references :cart, null: false, foreign_key: true
 
       t.timestamps
     end

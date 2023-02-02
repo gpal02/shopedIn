@@ -8,8 +8,6 @@ one:
   product_serial_number: MyString
   company: one
   category: one
-  order: one
-  cart: one
 
 two:
   product_name: MyString
@@ -19,5 +17,3 @@ two:
   product_serial_number: MyString
   company: two
   category: two
-  order: two
-  cart: two
