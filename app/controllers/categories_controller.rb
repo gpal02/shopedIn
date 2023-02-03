@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CategoriesController < ApplicationController
   def index
     @categories = Category.all
@@ -43,8 +45,8 @@ class CategoriesController < ApplicationController
   end
 
   private
-    def category_params
-      params.require(:category).permit(:category_name, :category_description)
-    end
 
+  def category_params
+    params.require(:category).permit(:category_name, :category_description)
+  end
 end

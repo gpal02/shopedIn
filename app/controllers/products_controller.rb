@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ProductsController < ApplicationController
   def index
     @products = Product.all
@@ -14,7 +16,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     if @product.save
-      @product.update(product_serial_number: "PSQ-#{@product.id.to_s.rjust(4,"0")}")
+      @product.update(product_serial_number: "PSQ-#{@product.id.to_s.rjust(4, '0')}")
       redirect_to @product
     else
       render :new, status: :unprocessable_entity
@@ -43,7 +45,9 @@ class ProductsController < ApplicationController
   end
 
   private
+
   def product_params
-    params.require(:product).permit(:product_name, :product_category, :product_description, :product_dimention, :product_price, :company_id, :category_id, :product_serial_number )
+    params.require(:product).permit(:product_name, :product_category, :product_description, :product_dimention,
+                                    :product_price, :company_id, :category_id, :product_serial_number)
   end
 end

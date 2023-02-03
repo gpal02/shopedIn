@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CompaniesController < ApplicationController
   def index
     @companies = Company.all
@@ -43,8 +45,9 @@ class CompaniesController < ApplicationController
   end
 
   private
-    def company_params
-      params.require(:company).permit(:company_name, :gstin_nnumber, :company_address, :company_contact, :company_description)
-    end
 
+  def company_params
+    params.require(:company).permit(:company_name, :gstin_nnumber, :company_address, :company_contact,
+                                    :company_description)
+  end
 end
