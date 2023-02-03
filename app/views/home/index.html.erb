@@ -6,9 +6,8 @@
     <div class="col">
       <%= link_to "add your product", new_product_path%>
       <h1>Products</h1>
-
       <ul>
-        <% @products.each do |product|%>
+        <% @products.each do |product| %>
           <li>
             <%= link_to product.product_name, product%>
           </li>
@@ -22,16 +21,27 @@
   
     <div class="col">
       <%= link_to "add your company", new_company_path%>
-      <h1>Compaies</h1>
-
+      <h1>Companies</h1>
       <ul>
-        <% @companies.each do |company|%>
+        <% @companies.each do |company| %>
           <li>
             <%= company.company_name%>
           </li>
           
           Description: <%= company.company_description%>
           
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="col">
+      <%= link_to "Add Your Order", new_order_path %>
+      <h1>Orders</h1>
+      <ul>
+        <% @orders.each do |order| %>
+          <li>
+            <%= link_to order.person_name, order %>
+          </li>          
         <% end %>
       </ul>
     </div>

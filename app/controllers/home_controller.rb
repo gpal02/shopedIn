@@ -5,5 +5,6 @@ class HomeController < ApplicationController
     @products = Product.all
     @companies = Company.all
     @carts = Cart.all
+    @orders = Order.all
   end
 end

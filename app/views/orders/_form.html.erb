@@ -1,2 +1,39 @@
-<h1>Orders#_form</h1>
-<p>Find me in app/views/orders/_form.html.erb</p>
+<%= form_with model: order do |form| %>
+
+  <div>
+    <%= form.label :person_name %><br>
+    <%= form.text_field :person_name %>
+  </div>
+
+  <div>
+    <%= form.label :delivery_contact %><br>
+    <%= form.text_field :delivery_contact %>
+  </div>
+
+  <div>
+    <%= form.label :delivery_address %><br>
+    <%= form.text_field :delivery_address %>
+  </div>
+
+  <div>
+    <%= form.label :delivery_city %><br>
+    <%= form.text_field :delivery_city %>
+  </div>
+
+  <div>
+    <%= form.label :delivery_state %><br>
+    <%= form.text_field :delivery_state %>
+  </div>
+
+  <div>
+    <%= form.label :delivery_pin_code %><br>
+    <%= form.text_field :delivery_pin_code %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+
+<%= link_to "Back", :back %>
