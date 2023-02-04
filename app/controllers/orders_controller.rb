@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class OrdersController < ApplicationController
   def index
     @orders = Order.all
@@ -45,7 +46,9 @@ class OrdersController < ApplicationController
   end
 
   private
+
   def order_params
-    params.require(:order).permit(:order_number, :person_name, :delivery_contact, :delivery_address, :delivery_city, :delivery_state, :delivery_pin_code)
+    params.require(:order).permit(:order_number, :person_name, :delivery_contact, :delivery_address, :delivery_city,
+                                  :delivery_state, :delivery_pin_code)
   end
 end

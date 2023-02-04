@@ -65,6 +65,9 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem 'spring'
+
+  # Preview email in your default browser
+  gem 'letter_opener'
 end
 
 group :test do
@@ -80,5 +83,5 @@ gem 'devise'
 # bootstrap
 gem 'cssbundling-rails'
 
-# testing purpose
+# Used for testing purpose gives your testcases on terminal
 gem 'rubocop-rails', require: false
