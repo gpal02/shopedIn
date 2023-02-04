@@ -7,9 +7,14 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   after_create :create_cart
+  after_create :generate_mail
 
   def create_cart
     Cart.create()
     puts "==================== Cart Created ===================="
+  end
+
+  def generate_mail
+    UserCreateMailer.welcome_email(id).deliver_now
   end
 end
