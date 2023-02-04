@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class UserCreateMailer < ApplicationMailer
-	default from: 'e-commerce@gmail.com'
+  default from: 'e-commerce@gmail.com'
 
   def welcome_email(id)
     @user = User.find(id)

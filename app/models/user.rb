@@ -10,8 +10,8 @@ class User < ApplicationRecord
   after_create :generate_mail
 
   def create_cart
-    Cart.create()
-    puts "==================== Cart Created ===================="
+    Cart.create
+    puts '==================== Cart Created ===================='
   end
 
   def generate_mail
